@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <title>签章模板</title>
+  <style th:fragment="style">
+    @page {
+      /*指定大小*/
+      /*size: 750px 1000px;*/
+      /*margin: 0px;*/
+      /*padding: 0;*/
+
+      size: A4;
+      @top-center {
+        content: element(header);
+      }
+      @bottom-center {
+        content: '页脚';
+        font-family: 'simsun';
+      }
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: simsun;
+    }
+    ul,ol{
+      list-style: none;
+    }
+    .fl{
+      float: left;
+    }
+    .fr{
+      float: right;
+    }
+    .clearfix:after{
+      display:block;
+      content:"";
+      clear:both;
+    }
+    .clearfix{zoom:1;}
+    .box{
+      padding: 80px 70px 0;
+      width: 750px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    .title{
+      text-align: center;
+      color: #333333;
+      font-size: 32px;
+      font-weight: 500;
+    }
+    .content{
+      padding-top:54px;
+    }
+    .line-box{
+      margin-top: 10px;
+    }
+    .line-block{
+      padding-top: 16px;
+    }
+    .data-box{
+      font-size: 16px;
+      border-bottom: 1px solid #333333;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+    label{
+      font-size: 16px;
+      color: #333333;
+    }
+    .aling-top{
+      align-items: flex-start !important;
+    }
+    .no-border-data{
+      font-size: 16px;
+      line-height: 22px;
+      text-indent: 2em;
+      color: #333333;
+    }
+    .rp-box{
+      margin-top: 24px;
+    }
+    .rp-box>h4{
+      font-size: 16px;
+      color: #333333;
+      line-height: 22px;
+      font-weight: 400;
+    }
+    .drug-box{
+      padding-top: 16px;
+    }
+    .drug-list{
+      margin-bottom: 32px;
+    }
+    .drug-list:last-child{
+      margin-bottom: 0;
+    }
+    .drug-tit{
+      line-height: 20px;
+    }
+    .drug-tit span{
+      color: #333333;
+      font-size: 14px;
+
+    }
+    .drug-tit .drug-num{
+      margin-left: 24px;
+    }
+    .drug-info{
+      margin-top: 8px;
+      height: 20px;
+    }
+    .drug-info .info-list{
+      width: 25%;
+      font-size: 14px;
+      color: #333333;
+
+    }
+    .drug-info .info-list:last-child{
+      text-align: right;
+    }
+    .signature-box{
+      margin-top: 38px;
+      height: 80px;
+    }
+    .signature-list{
+      width: 280px;
+      height: 100%;
+      line-height: 80px;
+    }
+    .tip-box{
+      margin-top: 18px;
+    }
+    .tip-box p{
+      color: #999999;
+      font-size: 14px;
+
+      line-height: 24px;
+    }
+  </style>
+</head>
+
+<body th:fragment="body">
+  <div class="box">
+    <h3 class="title" th:text="${title}"> </h3>
+    <div class="content">
+      <div>
+        <div class="line-box clearfix">
+          <div class="line-block fl">
+            <label class="fl">编号：</label>
+            <div class="data-box fl" style="width: 337px;" th:text="${no}">Rp100000001</div>
+          </div>
+          <div class="line-block fr">
+            <label class="fl">费别：</label>
+            <div class="data-box fl" style="width: 132px;" th:text="${priceType}">自费</div>
+          </div>
+        </div>
+        <div class="line-box clearfix">
+          <div class="line-block fl">
+            <label class="fl">姓名：</label>
+            <div class="data-box fl" style="width: 132px;" th:text="${name}">王麻子</div>
+          </div>
+          <div class="line-block fl" style="margin-left: 10px;">
+            <label class="fl">性别：</label>
+            <div class="data-box fl" style="width: 132px;" th:text="${sex}">男</div>
+          </div>
+          <div class="line-block fr">
+            <label class="fl">年龄：</label>
+            <div class="data-box fl" style="width: 132px;"><span th:text="${age}">37</span>岁</div>
+          </div>
+        </div>
+        <div class="line-box">
+          <div class="line-block clearfix">
+            <label class="fl">日期：</label>
+            <div class="data-box fl" style="width: 508px;"  th:text="${date}">20210-06-23</div>
+          </div>
+        </div>
+        <div class="line-box">
+          <div class="line-block aling-top clearfix">
+            <label class="fl">描述：</label>
+            <div class="no-border-data fl" style="width: 540px;"  th:text="${diagnosis}">	</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
