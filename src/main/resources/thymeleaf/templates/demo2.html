@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<style th:fragment="style">
+  @page {
+    size: 400px 1000px;
+    margin: 0px;
+    padding: 0;
+  }
+  .data-box {
+    background-color: red;
+  }
+</style>
+<body th:fragment="body">
+<h2 th:text="${title}"></h2>
+<div>
+  <div class="data-box fl" th:text="${name}">姓名</div>
+</div>
+<div>
+  <img height="100" width="390" th:src="@{${image}}" alt="">
+</div>
+</body>
+</html>

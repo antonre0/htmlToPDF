@@ -1,12 +1,9 @@
 package com.example.demo.thymeleaf;
 
 import com.example.demo.thymeleaf.util.PdfUtil;
-import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +22,7 @@ class ThymeleafApplicationTests {
         variables.put("date", "标题");
         variables.put("diagnosis", "描述");
 
-        PdfUtil.buildPdf(  "demo", variables);
+        PdfUtil.buildPdf("demo", variables);
     }
 
 
