@@ -98,12 +98,47 @@
         </dependency>
 
 
+        <!-- html2img 1 -->
+        <dependency>
+            <groupId>org.xhtmlrenderer</groupId>
+            <artifactId>core-renderer</artifactId>
+            <version>R8</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
         <dependency>
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
             <version>1.9.22</version>
         </dependency>
+
+        <!-- html2img 2 -->
+        <!-- https://mvnrepository.com/artifact/net.sf.cssbox/cssbox -->
+        <dependency>
+            <groupId>net.sf.cssbox</groupId>
+            <artifactId>cssbox</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twelvemonkeys.imageio</groupId>
+            <artifactId>imageio-batik</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-transcoder</artifactId>
+            <version>1.11</version>
+        </dependency>
+        <!-- html2img 3 -->
+        <!--Aspose相关依赖 需要在本地指定导入-->
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-html</artifactId>
+            <version>21.12</version>
+            <classifier>jdk11</classifier>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/aspose-html-21.12-jdk11.jar</systemPath>
+        </dependency>
+
 
     </dependencies>
 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=0"
+    />
+    <!--<link rel="stylesheet" href="../css/card.css" />-->
+    <title>名片模板</title>
+    <style th:fragment="style">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        background-color: #f5f5f5;
+      }
+      body {
+        font-family: "PingFang SC", "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul,
+      li,
+      ol {
+        list-style: none;
+      }
+      .card-box {
+        width: 670px;
+        margin: 0px auto;
+        border-radius: 24px;
+      }
+      .card-box .photo-box {
+        position: relative;
+        z-index: 10;
+        margin: 0 auto;
+        width: 176px;
+        height: 176px;
+        padding: 8px;
+        background: #fff;
+        border-radius: 50%;
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      }
+      .card-box .photo-box img {
+        background: #666;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+      }
+      .business-card {
+        margin-top: -86px;
+        padding-bottom: 80px;
+        width: 670px;
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        padding-top: 126px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .business-card > h4 {
+        color: #333333;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 46px;
+      }
+      .business-card .slogan {
+        margin-top: 8px;
+        font-size: 24px;
+        color: #333333;
+        line-height: 32px;
+      }
+      .business-card .qr-code-box {
+        width: 240px;
+        height: 240px;
+        border-radius: 16px;
+        background: #fff;
+        margin: 48px auto 0;
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .business-card .qr-code-box img {
+        width: 100%;
+        height: 100%;
+      }
+      .business-card .qr-tip-text {
+        color: #999999;
+        font-size: 20px;
+        margin-top: 16px;
+      }
+      .business-card .num-box {
+        display: inline-block;
+        margin-top: 48px;
+        padding: 24px 48px;
+        background: rgba(26, 179, 112, 0.1);
+        border-radius: 44px;
+        font-size: 28px;
+        color: #1ab370;
+      }
+      .business-card .icon-box {
+        margin-top: 80px;
+        overflow: hidden;
+        align-items: center;
+        padding: 20px;
+      }
+      .business-card .icon-box li {
+        float: left;
+        width: 25%;
+      }
+      .business-card .icon-box li .icon {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        background: #f5f5f5;
+        border-radius: 50%;
+        padding: 22px;
+        box-sizing: border-box;
+      }
+      .business-card .icon-box li .icon i {
+        display: block;
+        width: 36px;
+        height: 36px;
+      }
+      .business-card .icon-box li .icon i.icon1 {
+        background: url("../img/card-icon1.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .business-card .icon-box li .icon i.icon2 {
+        background: url("../img/card-icon2.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .business-card .icon-box li .icon i.icon3 {
+        background: url("../img/card-icon3.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .business-card .icon-box li .icon i.icon4 {
+        background: url("../img/card-icon4.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .business-card .icon-box li p {
+        color: #333333;
+        font-size: 20px;
+        margin-top: 24px;
+      }
+    </style>
+  </head>
+
+  <body th:fragment="body">
+    <div class="card-box">
+      <div class="photo-box">
+        <img src="https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338" />
+      </div>
+      <div class="business-card">
+        <h4>欢迎加入【医百科技】的诊室</h4>
+        <p class="slogan">心系客户服务，提升服务质量</p>
+        <div class="qr-code-box">
+          <img src="https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338" />
+        </div>
+        <p class="qr-tip-text">加入方式：长按二维码，识别二维码</p>
+        <div class="num-box">邀请码：28798092</div>
+        <ul class="icon-box">
+          <li>
+            <div class="icon"><i class="icon1"></i></div>
+            <p>下载APP</p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon2"></i></div>
+            <p>登录/注册</p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon3"></i></div>
+            <p>完成医生认证</p>
+          </li>
+          <li>
+            <div class="icon"><i class="icon4"></i></div>
+            <p>开启服务</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
