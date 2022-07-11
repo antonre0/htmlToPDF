@@ -24,7 +24,7 @@ import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 
-@SpringBootTest
+//@SpringBootTest
 class ThymeleafToImg1Tests {
 
 
@@ -37,9 +37,8 @@ class ThymeleafToImg1Tests {
     void html2img() throws Exception {
         Map<String, Object> variables = new HashMap<>();
 
-        variables.put("title", "标题123456");
-        variables.put("name", "张三");
-        variables.put("image", "https://www.w3school.com.cn/i/photo/flower-2.jpg");
+        variables.put("title", "通用123");
+        variables.put("aUrl", "https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338");
 
 
         //构造模板引擎
@@ -90,9 +89,8 @@ class ThymeleafToImg1Tests {
     void html2img2() throws Exception {
         Map<String, Object> variables = new HashMap<>();
 
-        variables.put("title", "标题123456");
-        variables.put("name", "张三");
-        variables.put("image", "https://www.w3school.com.cn/i/photo/flower-2.jpg");
+        variables.put("title", "通用123");
+        variables.put("aUrl", "https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338");
 
 
         //构造模板引擎

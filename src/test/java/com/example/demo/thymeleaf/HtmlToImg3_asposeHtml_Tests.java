@@ -55,7 +55,6 @@ class HtmlToImg3_asposeHtml_Tests {
         Converter.convertHTML(htmlDocument,saveOptions,"C:\\tmp\\a.png");
         htmlDocument.dispose();
 
-        Converter.convertHTML(new Url("http://localhost:8080/share"),saveOptions,"C:\\tmp\\b.png");
     }
 
 

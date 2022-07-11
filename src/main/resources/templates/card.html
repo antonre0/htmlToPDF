@@ -101,10 +101,10 @@
         display: inline-block;
         margin-top: 48px;
         padding: 24px 48px;
-        background: rgba(26, 179, 112, 0.1);
+        background-color: #e8f7f0;
         border-radius: 44px;
         font-size: 28px;
-        color: #1ab370;
+        color: #1AB370;
       }
       .business-card .icon-box {
         margin-top: 80px;
@@ -127,23 +127,23 @@
       }
       .business-card .icon-box li .icon i {
         display: block;
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
       }
       .business-card .icon-box li .icon i.icon1 {
-        background: url("../img/card-icon1.png") no-repeat;
+        background: url("https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_prod/avatar/1657506495581") no-repeat;
         background-size: 100% 100%;
       }
       .business-card .icon-box li .icon i.icon2 {
-        background: url("../img/card-icon2.png") no-repeat;
+        background: url("https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_prod/avatar/1657506528246") no-repeat;
         background-size: 100% 100%;
       }
       .business-card .icon-box li .icon i.icon3 {
-        background: url("../img/card-icon3.png") no-repeat;
+        background: url("https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_prod/avatar/1657506542970") no-repeat;
         background-size: 100% 100%;
       }
       .business-card .icon-box li .icon i.icon4 {
-        background: url("../img/card-icon4.png") no-repeat;
+        background: url("https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_prod/avatar/1657506557753") no-repeat;
         background-size: 100% 100%;
       }
       .business-card .icon-box li p {
@@ -157,13 +157,42 @@
   <body th:fragment="body">
     <div class="card-box">
       <div class="photo-box">
-        <img src="https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338" />
+        <div class="ttt" style="position: relative;
+                              z-index: 10;
+                              margin: 0 auto;
+                              width: 170px;
+                              height: 170px;
+                              padding: 8px;
+                              background: #fff;
+                              border-radius: 50%;
+                              box-sizing: border-box;
+                              overflow: hidden;
+                              box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+                              background: url('https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338');
+                              background-size: 100% 100% ">
+        </div>
+      </div>
+      <div class="photo-box">
+        <div class="ttt" th:style="'position: relative;
+                              z-index: 10;
+                              margin: 0 auto;
+                              width: 170px;
+                              height: 170px;
+                              padding: 8px;
+                              background: #fff;
+                              border-radius: 50%;
+                              box-sizing: border-box;
+                              overflow: hidden;
+                              box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+                              background: url('+@{${aUrl}}+');
+                              background-size: 100% 100% '">
+        </div>
       </div>
       <div class="business-card">
-        <h4>欢迎加入的诊室</h4>
+        <h4 th:text="${title}">欢迎加入的诊室</h4>
         <p class="slogan">心系客户服务，提升服务质量</p>
         <div class="qr-code-box">
-          <img src="https://hospital-1252497236.cos.ap-beijing.myqcloud.com/yfz_dev/avatar/1650262118338" />
+          <img src="https://admin.dev.100yfz.cn/system-api/account/enterprise/qrcode/910/280/280" />
         </div>
         <p class="qr-tip-text">加入方式：长按二维码，识别二维码</p>
         <div class="num-box">邀请码：28798092</div>

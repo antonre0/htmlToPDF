@@ -101,8 +101,8 @@
         <!-- html2img 1 -->
         <dependency>
             <groupId>org.xhtmlrenderer</groupId>
-            <artifactId>core-renderer</artifactId>
-            <version>R8</version>
+            <artifactId>flying-saucer-core</artifactId>
+            <version>9.1.5</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
         <dependency>
