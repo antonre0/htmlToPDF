@@ -99,10 +99,11 @@
 
 
         <!-- html2img 1 -->
+        <!--Flying Saucer is a CSS 2.1 renderer written in Java. This artifact contains the core rendering and layout code as well as Java2D output.-->
         <dependency>
             <groupId>org.xhtmlrenderer</groupId>
             <artifactId>flying-saucer-core</artifactId>
-            <version>9.1.5</version>
+            <version>9.1.22</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
         <dependency>
